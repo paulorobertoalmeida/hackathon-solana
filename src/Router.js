@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-// Importar componentes
-// import MiComponente from "./components/MiComponente";
-// import SeccionPruebas from "./components/SeccionPruebas";
 import Peliculas from "./components/Peliculas";
 import Error from "./components/Error";
 import Header from "./components/Header";
@@ -22,7 +19,6 @@ class Router extends Component {
             <BrowserRouter>
                 <Header />
 
-                {/*Configurar rutas y páginas */}
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/home" component={Home} />

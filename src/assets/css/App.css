@@ -86,11 +86,11 @@ body {
 }
 
 #menu a:hover {
-    color: #3cb2d3;
+    color: #000;
 }
 
 .active {
-    border-bottom: 2px solid #3cb2d3;
+    border-bottom: 2px solid #000;
 }
 
 #slider {
@@ -101,12 +101,12 @@ body {
     text-shadow: 0px 0px 5px #444;
 
     /*DEGRADADO CSS*/
-    background: rgba(73, 155, 234, 1);
+    background: #000;
     background: -moz-radial-gradient(
         center,
         ellipse cover,
-        rgba(73, 155, 234, 1) 0%,
-        rgba(81, 175, 247, 1) 100%
+        #000 0%,
+        #000 100%
     );
     background: -webkit-gradient(
         radial,
@@ -114,33 +114,33 @@ body {
         0px,
         center center,
         100%,
-        color-stop(0%, rgba(73, 155, 234, 1)),
-        color-stop(100%, rgba(81, 175, 247, 1))
+        color-stop(0%, #000),
+        color-stop(100%, #000)
     );
     background: -webkit-radial-gradient(
         center,
         ellipse cover,
-        rgba(73, 155, 234, 1) 0%,
-        rgba(81, 175, 247, 1) 100%
+        #000 0%,
+        #000 100%
     );
     background: -o-radial-gradient(
         center,
         ellipse cover,
-        rgba(73, 155, 234, 1) 0%,
-        rgba(81, 175, 247, 1) 100%
+        #000 0%,
+        #000100%
     );
     background: -ms-radial-gradient(
         center,
         ellipse cover,
-        rgba(73, 155, 234, 1) 0%,
-        rgba(81, 175, 247, 1) 100%
+        #000%,
+        #000 100%
     );
     background: radial-gradient(
         ellipse at center,
-        rgba(73, 155, 234, 1) 0%,
-        rgba(81, 175, 247, 1) 100%
+        #000 0%,
+        #000 100%
     );
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#51aff7', GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#000', GradientType=1 );
 }
 
 #slider h1 {
