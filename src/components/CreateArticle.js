@@ -7,7 +7,7 @@ import swal from "sweetalert";
 import Global from "../Global";
 import Sidebar from "./Sidebar";
 
-// Validación formularios y alertas
+// Validating Forms
 class CreateArticle extends Component {
     url = Global.url;
     titleRef = React.createRef();
@@ -21,8 +21,7 @@ class CreateArticle extends Component {
 
     constructor(props) {
         super(props);
-        // Se carga el objeto para validar el formulario
-        // En el curso utiliza el componentWillMount
+        // Load Object and create a form
         this.validator = new SimpleReactValidator({
             messages: {
                 required: "Este campo es requerido",
@@ -46,7 +45,7 @@ class CreateArticle extends Component {
     saveArticle = (e) => {
         e.preventDefault();
 
-        // Rellenar state con formulario
+        // Completing with Form(create) State
         this.changeState();
 
         if (this.validator.allValid()) {

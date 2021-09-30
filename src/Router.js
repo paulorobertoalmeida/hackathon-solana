@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Feed from "./components/Feed";
-import Formulario from "./components/Formulario";
+import Create from "./components/Create";
 import Article from "./components/Article";
 import Search from "./components/Search";
 import CreateArticle from "./components/CreateArticle";
@@ -51,7 +51,7 @@ class Router extends Component {
                             return <Redirect to={"/feed/busqueda/" + search} />;
                         }}
                     />
-                    <Route exact path="/formulario" component={Formulario} />
+                    <Route exact path="/create" component={Create} />
                     <Route exact path="/peliculas" component={Peliculas} />
 
                     }

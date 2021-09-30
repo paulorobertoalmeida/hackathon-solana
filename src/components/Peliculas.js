@@ -50,11 +50,11 @@ class Peliculas extends Component {
     }
 
     componentDidMount() {
-        //console.log("Se ha montado el componente");
+        
     }
 
     componentWillUnmount() {
-        //console.log("Me voy a desmontar");
+        
     }
 
     render() {
@@ -78,7 +78,7 @@ class Peliculas extends Component {
 
         return (
             <React.Fragment>
-                <Slider title="Películas" size="slider-small" />
+                <Slider title="Películas" size="slider-big" />
                 <div className="center">
                     <div id="content" className="peliculas">
                         <h2 className="subheader">Hightlight</h2>
@@ -92,18 +92,8 @@ class Peliculas extends Component {
                             </button>
                         </p>
 
-                        {/* {this.state.favorita.titulo ? (
-          <p className="favorita" style={pStyle}>
-            <strong>La película favorita es: </strong>
-            <span>{this.state.favorita.titulo}</span>
-          </p>
-        ) : (
-          <p>No hay película favorita</p>
-        )} */}
 
-                        {favorita}
-
-                        {/* Crear componente pelicula */}
+                        {/* Create a new Component */}
 
                         <div id="articles" className="peliculas">
                             {this.state.peliculas.map((pelicula, i) => {

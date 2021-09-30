@@ -9,7 +9,6 @@ import Sidebar from "./Sidebar";
 
 // 1. Tenemos que recoger el id del artículo a editar de la url
 // 2. Crear un método para sacar ese objeto del backend
-// 3. Repoblar / rellenar el formulario con esos datos
 // 4. Actualizar el objeto haciendo una petición al backend
 
 class EditArticle extends Component {
@@ -26,7 +25,6 @@ class EditArticle extends Component {
 
     constructor(props) {
         super(props);
-        // Se carga el objeto para validar el formulario
         // En el curso utiliza el componentWillMount
         this.validator = new SimpleReactValidator({
             messages: {
@@ -65,7 +63,6 @@ class EditArticle extends Component {
     saveArticle = (e) => {
         e.preventDefault();
 
-        // Rellenar state con formulario
         this.changeState();
 
         if (this.validator.allValid()) {

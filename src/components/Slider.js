@@ -7,7 +7,7 @@ class Slider extends Component {
       <div id="slider" className={this.props.size}>
         <h1>{this.props.title}</h1>
         {this.props.btn && (
-         <Link to={'/feed'} className="btn-white">
+         <Link to={'/create'} className="btn-white">
             {this.props.btn}
           </Link>
         )}

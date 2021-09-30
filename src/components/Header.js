@@ -34,7 +34,7 @@ class Header extends Component {
               <NavLink to="/feed" exact activeClassName="active">Feed</NavLink>
               </li>
               <li>
-              <NavLink to="/formulario" exact activeClassName="active">Create</NavLink>
+              <NavLink to="/create" exact activeClassName="active">Create</NavLink>
               </li>
               <li>
               <NavLink to="/peliculas" exact activeClassName="active">Highlight</NavLink>

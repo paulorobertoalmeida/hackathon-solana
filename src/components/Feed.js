@@ -13,7 +13,7 @@ class Feed extends Component {
     render() {
         return (
             <div id="feed">
-                <Slider title="Feed" size="slider-small" />
+                <Slider title="Feed" size="slider-big" />
                 <div className="center">
                     <div id="content">
                         {/* Feed will come from Node rest API */}

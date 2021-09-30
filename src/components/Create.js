@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Slider from "./Slider";
 import Sidebar from "./Sidebar";
 
-class Formulario extends Component {
+class Create extends Component {
     nombreRef = React.createRef();
     apellidosRef = React.createRef();
     bioRef = React.createRef();
@@ -15,7 +15,7 @@ class Formulario extends Component {
         user: {},
     };
 
-    recibirFormulario = (e) => {
+    receiveCreate = (e) => {
         e.preventDefault();
 
         var genero = "hombre";
@@ -48,12 +48,12 @@ class Formulario extends Component {
         }
 
         return (
-            <div id="formulario">
+            <div id="create">
                 <Slider title="Create Questions" btn="Go to feed" size="slider-big" />
                 <div className="center">
                     <div id="content">
                         <h1 className="subheader">Question Box</h1>
-                        {/* Mostrar datos del formulario */}
+                        {/* Show Form Data */}
                         {this.state.user.nombre && (
                             <div id="user-data">
                                 <p>
@@ -71,11 +71,11 @@ class Formulario extends Component {
                             </div>
                         )}
 
-                        {/* Crear un formulario */}
+                        {/* Form to Create a Question */}
                         <form
                             className="mid-form"
-                            onSubmit={this.recibirFormulario}
-                            onChange={this.recibirFormulario}
+                            onSubmit={this.receiveCreate}
+                            onChange={this.receiveCreate}
                         >
                             <div className="form-group">
                                 <label htmlFor="nombre">First Name</label>
@@ -144,4 +144,4 @@ class Formulario extends Component {
     }
 }
 
-export default Formulario;
+export default Create;
