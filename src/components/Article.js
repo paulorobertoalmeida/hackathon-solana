@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import Moment from "react-moment";
-import "moment/locale/es";
 import swal from "sweetalert";
 
 import Global from "../Global";

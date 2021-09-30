@@ -24,7 +24,7 @@ class CreateArticle extends Component {
         // Load Object and create a form
         this.validator = new SimpleReactValidator({
             messages: {
-                required: "Este campo es requerido",
+                required: "This is a requered field",
             },
         });
     }
@@ -59,12 +59,12 @@ class CreateArticle extends Component {
                     });
 
                     swal(
-                        "AArticle created",
-                        "El artículo ha sido creado correctamente",
+                        "Question created",
+                        "Sucessful Created",
                         "success"
                     );
 
-                    //Subir la imagen
+                    {/*//Subir la imagen
                     if (this.state.selectedFile !== null) {
                         // Sacar el id del artículo guardado
                         var articleId = this.state.article._id;
@@ -75,7 +75,7 @@ class CreateArticle extends Component {
                             "file0",
                             this.state.selectedFile,
                             this.state.selectedFile.name
-                        );
+                        ); 
 
                         // Petición ajax
                         axios
@@ -100,7 +100,7 @@ class CreateArticle extends Component {
                         this.setState({
                             status: res.data.status,
                         });
-                    }
+                    } */}
                 } else {
                     this.setState({
                         status: "failed",
@@ -108,7 +108,7 @@ class CreateArticle extends Component {
                 }
             });
         } else {
-            // Fallo en la validación
+            // Validation Failure
             this.setState({
                 status: "failed",
             });
@@ -127,7 +127,7 @@ class CreateArticle extends Component {
     render() {
         if (this.state.status === "success") {
             return <Redirect to="/feed" />;
-        }
+        } 
 
         return (
             <div className="center">
@@ -177,7 +177,7 @@ class CreateArticle extends Component {
 
                         <input
                             type="submit"
-                            value="Guardar"
+                            value="Save"
                             className="btn btn-success"
                         />
                     </form>

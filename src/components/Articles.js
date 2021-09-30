@@ -117,8 +117,8 @@ class Articles extends Component {
         } else {
             return (
                 <div id="articles">
-                    <h2 className="subheader">Cargando....</h2>
-                    <p>ELoading COntent</p>
+                    <h2 className="subheader">Loading....</h2>
+                    <p>Loading Content</p>
                 </div>
             );
         }

@@ -25,10 +25,10 @@ class EditArticle extends Component {
 
     constructor(props) {
         super(props);
-        // En el curso utiliza el componentWillMount
+        // Using componentWillMount
         this.validator = new SimpleReactValidator({
             messages: {
-                required: "Este campo es requerido",
+                required: "This is a required field",
             },
         });
     }
@@ -66,7 +66,7 @@ class EditArticle extends Component {
         this.changeState();
 
         if (this.validator.allValid()) {
-            // Hacer una peticion http por post para guardar el articulo
+            // Call a http each post 
             axios
                 .put(this.url + "article/" + this.articleId, this.state.article)
                 .then((res) => {
@@ -78,17 +78,18 @@ class EditArticle extends Component {
                         });
 
                         swal(
-                            "Artículo actualizado",
-                            "El artículo ha sido actualizado correctamente",
+                            "Refreshing Questions",
+                            "This question is refreshed",
                             "success"
                         );
 
                         //Subir la imagen
                         if (this.state.selectedFile !== null) {
-                            // Sacar el id del artículo guardado
+                            
+                            // Set the id of recorded question
                             var articleId = this.state.article._id;
 
-                            // Crear form data y añadir fichero
+                            // Creates a form data and add a field
                             const formData = new FormData();
                             formData.append(
                                 "file0",
@@ -96,7 +97,7 @@ class EditArticle extends Component {
                                 this.state.selectedFile.name
                             );
 
-                            // Petición ajax
+                            // Ajax Request
                             axios
                                 .post(
                                     this.url + "upload-image/" + articleId,
@@ -127,7 +128,7 @@ class EditArticle extends Component {
                     }
                 });
         } else {
-            // Fallo en la validación
+            // Validation Failure.
             this.setState({
                 status: "failed",
             });
@@ -214,14 +215,14 @@ class EditArticle extends Component {
                             <div className="clearfix"></div>
                             <input
                                 type="submit"
-                                value="Guardar"
+                                value="Save"
                                 className="btn btn-success"
                             />
                         </form>
                     )}
 
                     {!this.state.article.title && (
-                        <h1 className="subheader">Cargando...</h1>
+                        <h1 className="subheader">Loading...</h1>
                     )}
                 </section>
 
